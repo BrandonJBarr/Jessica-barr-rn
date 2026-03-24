@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="site-header">
-        <img src="logo.png" alt="Logo">
+        <img src="logo.png" alt="Logo" class="logo">
         <nav>
             <a href="index.html">Home</a>
             <a href="credentials.html">Credentials</a>
@@ -20,23 +20,23 @@
 
     <div class="container">
         <h1>Contact Jessica Barr</h1>
-        <p><em>Schedule a consultation to discuss case viability.</em></p>
+        <p style="text-align: center;"><em>Schedule a consultation to discuss case viability.</em></p>
 
-        <section>
+        <section class="section-box" style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px;">
             <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                 <label>Name:</label><br>
-                <input type="text" name="name" required><br><br>
+                <input type="text" name="name" required style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
                 
                 <label>Firm Name:</label><br>
-                <input type="text" name="firm"><br><br>
+                <input type="text" name="firm" style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
                 
                 <label>Case Type:</label><br>
-                <input type="text" name="case_type"><br><br>
+                <input type="text" name="case_type" style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
                 
                 <label>Brief Description:</label><br>
-                <textarea name="message" rows="5" required></textarea><br><br>
+                <textarea name="message" rows="5" required style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea><br>
                 
-                <button type="submit">Submit Inquiry</button>
+                <button type="submit" style="background: #0A192F; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Submit Inquiry</button>
             </form>
             <br>
             <p><strong>Phone:</strong> (555) 123-4567</p>
