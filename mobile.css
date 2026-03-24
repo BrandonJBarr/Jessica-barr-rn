@@ -1,10 +1,10 @@
-/* Updated Global CSS for Professional Look */
+/* Updated Global CSS for Dark Professional Look */
 body { 
     font-family: 'Montserrat', sans-serif; 
     line-height: 1.6; 
-    color: #333; 
+    color: #e0e0e0; 
     margin: 0; 
-    background-color: #f8f9fa; /* Softer background */
+    background-color: #0A192F; /* Dark Background */
 }
 
 /* Sticky Header/Nav */
@@ -24,26 +24,35 @@ nav a { color: #fff; text-decoration: none; font-weight: bold; margin-left: 15px
 
 /* Content Sections */
 .container { padding: 40px 20px; max-width: 900px; margin: 0 auto; }
-h1 { font-family: 'Playfair Display', serif; color: #0A192F; }
+h1 { font-family: 'Playfair Display', serif; color: #D4AF37; } /* Gold Heading */
+h2 { color: #D4AF37; }
+
+/* Section Boxes */
+.section-box, section { 
+    background-color: #112240; /* Slightly lighter dark box */
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
+    margin-bottom: 20px; 
+    color: #e0e0e0;
+}
 
 /* Service Icons Helper */
 .service-icon { 
     max-width: 80px; 
     display: block; 
     margin: 0 auto 15px; 
-    background: transparent !important; /* Force transparent background */
-    border: 1px solid red; /* TEST: Draw a red border to see if it's the image or the background! */
 }
 
 /* Hero Section */
-.hero { display: flex; flex-direction: column; align-items: center; gap: 20px; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.hero { display: flex; flex-direction: column; align-items: center; gap: 20px; padding: 20px; background: #112240; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.3); }
 .hero-text { flex: 1; text-align: center; }
-.headshot { max-width: 250px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+.headshot { max-width: 250px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.4); }
 
 /* Sticky Footer */
 footer { 
-    background-color: #0A192F; 
-    color: #fff; 
+    background-color: #050E1F; 
+    color: #ccc; 
     text-align: center; 
     padding: 20px; 
     margin-top: 40px; 
