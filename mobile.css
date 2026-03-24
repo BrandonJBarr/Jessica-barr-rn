@@ -26,6 +26,15 @@ nav a { color: #fff; text-decoration: none; font-weight: bold; margin-left: 15px
 .container { padding: 40px 20px; max-width: 900px; margin: 0 auto; }
 h1 { font-family: 'Playfair Display', serif; color: #0A192F; }
 
+/* Service Icons Helper */
+.service-icon { 
+    max-width: 80px; 
+    display: block; 
+    margin: 0 auto 15px; 
+    background: transparent !important; /* Force transparent background */
+    border: 1px solid red; /* TEST: Draw a red border to see if it's the image or the background! */
+}
+
 /* Hero Section */
 .hero { display: flex; flex-direction: column; align-items: center; gap: 20px; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
 .hero-text { flex: 1; text-align: center; }
