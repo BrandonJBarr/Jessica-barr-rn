@@ -4,28 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Jessica Barr, MSN, BSN - Nurse Expert Witness</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="credentials.html">Credentials</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html" style="color:#D4AF37;">Contact</a>
-    </nav>
+    <header class="site-header">
+        <img src="logo.png" alt="Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="credentials.html">Credentials</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html" style="color:#D4AF37;">Contact</a>
+        </nav>
+    </header>
 
-    <h1>Contact for Engagement</h1>
+    <div class="container">
+        <h1>Contact Jessica Barr</h1>
+        <p><em>Schedule a consultation to discuss case viability.</em></p>
 
-    <section>
-        <p>If you are an attorney or legal representative interested in discussing a case, please contact me directly at:</p>
-        <h2 style="text-align: center;"><a href="mailto:JessicaBarr.RN@gmail.com">JessicaBarr.RN@gmail.com</a></h2>
-        <p>To ensure a timely response, please include:</p>
-        <ul>
-            <li>Your Firm Name</li>
-            <li>Case Type / Area of Specialty</li>
-            <li>Brief description of services required</li>
-        </ul>
-    </section>
+        <section>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <label>Name:</label><br>
+                <input type="text" name="name" required><br><br>
+                
+                <label>Firm Name:</label><br>
+                <input type="text" name="firm"><br><br>
+                
+                <label>Case Type:</label><br>
+                <input type="text" name="case_type"><br><br>
+                
+                <label>Brief Description:</label><br>
+                <textarea name="message" rows="5" required></textarea><br><br>
+                
+                <button type="submit">Submit Inquiry</button>
+            </form>
+            <br>
+            <p><strong>Phone:</strong> (555) 123-4567</p>
+            <p><strong>Email:</strong> JessicaBarr.RN@gmail.com</p>
+        </section>
+    </div>
+
+    <footer>
+        <img src="logo.png" alt="Logo">
+        <p>Contact: JessicaBarr.RN@gmail.com | Serving Nationwide</p>
+    </footer>
 </body>
 </html>

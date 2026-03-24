@@ -6,42 +6,63 @@
     <title>Services | Jessica Barr, MSN, BSN - Nurse Expert Witness</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="mobile.css">
+    <style>
+        .service-icon { max-width: 80px; display: block; margin: 0 auto 15px; }
+        .service-section { text-align: center; }
+    </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="credentials.html">Credentials</a>
-        <a href="services.html" style="color:#D4AF37;">Services</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    <header>
-        <h1>Professional Services</h1>
-        <p><em>Expertise for Legal Professionals</em></p>
+    <header class="site-header">
+        <img src="logo.png" alt="Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="credentials.html">Credentials</a>
+            <a href="services.html" style="color:#D4AF37;">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
 
-    <section>
-        <h2>Medical Record Review</h2>
-        <p>Meticulous analysis of clinical records, diagnostic imaging, and pharmacy reports. I identify deviations from standard-of-care, gaps in documentation, and critical clinical events.</p>
-    </section>
+    <div class="container">
+        <h1>Professional Services</h1>
+        <p style="text-align: center;"><em>Expertise for Legal Professionals</em></p>
 
-    <section>
-        <h2>Clinical Chronologies & Timelines</h2>
-        <p>Transforming massive volumes of disorganized medical records into clear, chronological summaries. Designed to assist counsel, mediators, and juries in understanding the clinical trajectory of a case.</p>
-    </section>
+        <section class="service-section">
+            <img src="assets/icon_review.png" alt="Medical Record Review" class="service-icon">
+            <h2>Medical Record Review</h2>
+            <p>Meticulous analysis of clinical records, diagnostic imaging, and pharmacy reports. I identify deviations from standard-of-care, gaps in documentation, and critical clinical events.</p>
+        </section>
 
-    <section>
-        <h2>Deposition & Trial Support</h2>
-        <p>Providing expert assessment of opposing experts' testimony, identifying clinical strengths and vulnerabilities, and preparing counsel for precise, effective cross-examination.</p>
-    </section>
+        <section class="service-section">
+            <img src="assets/icon_timeline.png" alt="Clinical Chronologies" class="service-icon">
+            <h2>Clinical Chronologies & Timelines</h2>
+            <p>Transforming massive volumes of disorganized medical records into clear, chronological summaries. Designed to assist counsel, mediators, and juries in understanding the clinical trajectory of a case.</p>
+        </section>
 
-    <section>
-        <h2>Areas of Expertise</h2>
-        <ul>
-            <li>Pediatric Clinical Care</li>
-            <li>Outpatient Adult Medical Issues</li>
-            <li>Standard-of-Care Disputes</li>
-            <li>Clinical Documentation Standards</li>
-        </ul>
-    </section>
+        <section class="service-section">
+            <img src="assets/icon_testimony.png" alt="Deposition & Trial Support" class="service-icon">
+            <h2>Deposition & Trial Support</h2>
+            <img src="assets/court.png" alt="Jessica Barr testifying" style="max-width: 100%; border-radius: 8px; margin: 20px 0;">
+            <p>Providing expert assessment of opposing experts' testimony, identifying clinical strengths and vulnerabilities, and preparing counsel for precise, effective cross-examination.</p>
+        </section>
+
+        <section class="service-section">
+            <h2>Areas of Expertise</h2>
+            <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 20px;">
+                <div style="flex: 1; min-width: 150px;">
+                    <img src="assets/icon_pediatrics.png" alt="Pediatric Care" class="service-icon">
+                    <p>Pediatric Clinical Care</p>
+                </div>
+                <div style="flex: 1; min-width: 150px;">
+                    <img src="assets/icon_nationwide.png" alt="Nationwide Reach" class="service-icon">
+                    <p>Nationwide Expert Services</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <img src="logo.png" alt="Logo">
+        <p>Contact: JessicaBarr.RN@gmail.com | Serving Nationwide</p>
+    </footer>
 </body>
 </html>
