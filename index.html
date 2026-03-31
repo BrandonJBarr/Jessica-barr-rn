@@ -28,36 +28,30 @@
             color: #ffffff;
             font-weight: 400;
         }
-        .hero {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            padding: 40px 5%;
-        }
         .authority-badge {
             display: inline-block;
             background-color: transparent;
             border: 2px solid #D4AF37;
-            color: #ffffff; /* Changed to white for visibility */
+            color: #ffffff;
             padding: 8px 16px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 15px;
             font-size: 0.9rem;
-            background-color: #333333; /* Dark background to match theme */
+            background-color: #333333;
         }
         .section-box {
             margin: 60px 0;
             padding: 20px;
-            text-align: center; /* Centering sections */
+            text-align: center;
         }
         .process-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             margin-top: 30px;
-            justify-items: center; /* Centering items in grid */
+            justify-items: center;
         }
         .process-item {
             text-align: center;
@@ -66,6 +60,22 @@
             width: 50px;
             height: 50px;
             margin-bottom: 15px;
+        }
+        /* Style for matching buttons */
+        .btn {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: 700;
+            border: 2px solid #D4AF37;
+            display: inline-block;
+        }
+        .btn-primary {
+            background-color: #D4AF37;
+            color: #ffffff;
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: #333333;
         }
     </style>
 </head>
@@ -89,13 +99,13 @@
                 <h3>When nursing standards of care are scrutinized, clarity is the best evidence.</h3>
                 <p>Leveraging over 16 years of clinical excellence in pediatrics and adult outpatient care, I provide authoritative expert witness services for legal teams throughout the litigation process.</p>
                 <div style="display: flex; gap: 15px; margin-top: 20px;">
-                    <a href="contact.html" class="btn">Schedule Your Free Merit Review</a>
-                    <a href="credentials.html" class="btn" style="background: transparent; border: 2px solid #D4AF37;">View Credentials</a>
+                    <a href="contact.html" class="btn btn-primary">Schedule Your Free Merit Review</a>
+                    <a href="credentials.html" class="btn btn-secondary">View Credentials</a>
                 </div>
             </div>
         </section>
 
-        <!-- Centered Section -->
+        <!-- New Process Workflow Section -->
         <section class="section-box">
             <h2>The Collaborative Process</h2>
             <div class="process-grid">
