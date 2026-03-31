@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Jessica Barr, MSN, RN - Nurse Expert Witness</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="mobile.css">
     <style>
         body { background-color: #2c3e50; color: #333333; font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; }
-        .site-header { display: flex; align-items: center; justify-content: space-between; padding: 20px 5%; background: #2c3e50; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .site-header { display: flex; align-items: center; justify-content: space-between; padding: 20px 5%; background: #333333; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .logo-img { height: 80px; width: auto; }
-        .nav-links a { text-decoration: none; color: #ffffff; margin-left: 20px; }
-        .white-section { background-color: #ffffff; color: #333333; margin: 40px auto; padding: 40px; max-width: 900px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .nav-links { display: flex; gap: 15px; }
+        .nav-links a { text-decoration: none; color: #ffffff; font-size: 0.9em; font-weight: 700; }
+        .container { padding: 20px; max-width: 900px; margin: 0 auto; }
+        .white-section { background-color: #ffffff; padding: 30px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
     </style>
 </head>
 <body>
@@ -24,33 +25,14 @@
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-
     <div class="container">
         <section class="white-section">
             <h1>Contact Jessica Barr</h1>
-            <p style="text-align: center;"><em>Schedule a consultation to discuss case viability.</em></p>
-            
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <label>Name:</label><br>
-                <input type="text" name="name" required style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
-                
-                <label>Firm Name:</label><br>
-                <input type="text" name="firm" style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
-                
-                <label>Case Type:</label><br>
-                <input type="text" name="case_type" style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
-                
-                <label>Brief Description:</label><br>
-                <textarea name="message" rows="5" required style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea><br>
-                
-                <button type="submit" class="btn" style="padding: 10px 20px; background: #D4AF37; color: #fff; text-decoration: none; font-weight: 700; border: 2px solid #D4AF37; display: inline-block;">Submit Inquiry</button>
-            </form>
-            <br>
+            <p>Schedule a consultation to discuss case viability.</p>
             <p><strong>Phone:</strong> (817) 975-1961</p>
             <p><strong>Email:</strong> JessicaBarr.RN@gmail.com</p>
         </section>
     </div>
-
     <footer style="text-align: center; color: white; padding: 20px;">
         <p>&copy; 2026 Jessica Barr, MSN, RN</p>
     </footer>
