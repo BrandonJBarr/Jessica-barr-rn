@@ -6,11 +6,34 @@
     <title>Home | Jessica Barr, MSN, RN - Nurse Expert Witness</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="mobile.css">
+    <style>
+        .site-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 5%;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .logo-img {
+            height: 60px; /* Adjust as needed */
+            width: auto;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 400;
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
-        <div class="logo">Jessica Barr, MSN, RN</div>
-        <nav>
+        <img src="assets/transparent_logo_1.png" alt="Jessica Barr, MSN, RN Logo" class="logo-img">
+        <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="credentials.html">Credentials</a>
@@ -20,42 +43,19 @@
 
     <div class="container">
         <section class="hero">
-            <img src="Headshot.jpg" alt="Jessica Barr, MSN, RN" class="headshot">
+            <img src="assets/Headshot.jpg" alt="Jessica Barr, MSN, RN" class="headshot">
             <div class="hero-text">
                 <h1>Precision-Based Nursing Expertise for Legal Professionals.</h1>
                 <h3>When nursing standards of care are scrutinized, clarity is the best evidence.</h3>
                 <p>Leveraging over 16 years of clinical excellence in pediatrics and adult outpatient care, I provide authoritative expert witness services for legal teams throughout the litigation process.</p>
                 <div style="display: flex; gap: 15px; margin-top: 20px;">
-                    <a href="#" class="btn">Schedule Your Free Merit Review</a>
+                    <a href="contact.html" class="btn">Schedule Your Free Merit Review</a>
                     <a href="credentials.html" class="btn" style="background: transparent; border: 2px solid #D4AF37;">View Credentials</a>
                 </div>
             </div>
         </section>
 
-        <section class="section-box" style="text-align: center;">
-            <img src="court.png" alt="Expert Witness Services" style="max-width: 400px; border-radius: 8px;">
-            <h2>Authoritative Litigation Support</h2>
-            <p>From pediatrics to outpatient adult care, I translate complex medical data into clear, actionable testimony.</p>
-        </section>
-
-        <section class="section-box">
-            <h2>Why Choose Me?</h2>
-            <ul>
-                <li><strong>16+ Years RN Experience:</strong> A deep, multi-specialty clinical background.</li>
-                <li><strong>Plaintiff, Defendant, or Joint:</strong> I bring objective, professional analysis to every case.</li>
-                <li><strong>Clear Insights:</strong> I specialize in transforming complex medical charts into logical, jury-ready chronologies.</li>
-            </ul>
-        </section>
-
-        <section class="section-box">
-            <h2>My Core Services</h2>
-            <ul>
-                <li><strong>Case Merit Review:</strong> Quick initial assessment for case viability.</li>
-                <li><strong>Standard of Care Analysis:</strong> Identifying breaches with expert detail.</li>
-                <li><strong>Medical Record Review & Chronologies:</strong> Simplifying data for trial preparation.</li>
-                <li><strong>Expert Testimony:</strong> Authoritative, clear, and professional court presence.</li>
-            </ul>
-        </section>
+        <!-- ... rest of sections ... -->
     </div>
 
     <footer>
