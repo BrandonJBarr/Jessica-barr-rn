@@ -7,27 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="mobile.css">
     <style>
-        .site-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 5%;
-            background: #333333;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .logo-img {
-            height: 80px;
-            width: auto;
-        }
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-        .nav-links a {
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: 400;
-        }
+        body { background-color: #2c3e50; color: #333333; font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; }
+        .site-header { display: flex; align-items: center; justify-content: space-between; padding: 20px 5%; background: #2c3e50; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .logo-img { height: 80px; width: auto; }
+        .nav-links a { text-decoration: none; color: #ffffff; margin-left: 20px; }
+        .white-section { background-color: #ffffff; color: #333333; margin: 40px auto; padding: 40px; max-width: 900px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
     </style>
 </head>
 <body>
@@ -42,7 +26,7 @@
     </header>
 
     <div class="container">
-        <section class="section-box">
+        <section class="white-section">
             <h1>Contact Jessica Barr</h1>
             <p style="text-align: center;"><em>Schedule a consultation to discuss case viability.</em></p>
             
@@ -59,7 +43,7 @@
                 <label>Brief Description:</label><br>
                 <textarea name="message" rows="5" required style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea><br>
                 
-                <button type="submit" class="btn">Submit Inquiry</button>
+                <button type="submit" class="btn" style="padding: 10px 20px; background: #D4AF37; color: #fff; text-decoration: none; font-weight: 700; border: 2px solid #D4AF37; display: inline-block;">Submit Inquiry</button>
             </form>
             <br>
             <p><strong>Phone:</strong> (817) 975-1961</p>
@@ -67,8 +51,8 @@
         </section>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Jessica Barr, MSN, RN | Contact: JessicaBarr.RN@gmail.com | (817) 975-1961 | Serving Nationwide</p>
+    <footer style="text-align: center; color: white; padding: 20px;">
+        <p>&copy; 2026 Jessica Barr, MSN, RN</p>
     </footer>
 </body>
 </html>
