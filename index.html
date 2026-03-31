@@ -28,27 +28,36 @@
             color: #ffffff;
             font-weight: 400;
         }
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 40px 5%;
+        }
         .authority-badge {
             display: inline-block;
             background-color: transparent;
             border: 2px solid #D4AF37;
-            color: #333333;
+            color: #ffffff; /* Changed to white for visibility */
             padding: 8px 16px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 15px;
             font-size: 0.9rem;
+            background-color: #333333; /* Dark background to match theme */
         }
         .section-box {
-            margin: 60px 0; /* Increased whitespace for premium feel */
+            margin: 60px 0;
             padding: 20px;
+            text-align: center; /* Centering sections */
         }
         .process-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             margin-top: 30px;
+            justify-items: center; /* Centering items in grid */
         }
         .process-item {
             text-align: center;
@@ -86,7 +95,7 @@
             </div>
         </section>
 
-        <!-- New Process Workflow Section -->
+        <!-- Centered Section -->
         <section class="section-box">
             <h2>The Collaborative Process</h2>
             <div class="process-grid">
@@ -108,7 +117,7 @@
             </div>
         </section>
 
-        <section class="section-box" style="text-align: center;">
+        <section class="section-box">
             <img src="court.png" alt="Expert Witness Services" style="max-width: 400px; border-radius: 8px;">
             <h2>Authoritative Litigation Support</h2>
             <p>From pediatrics to outpatient adult care, I translate complex medical data into clear, actionable testimony.</p>
@@ -116,7 +125,7 @@
 
         <section class="section-box">
             <h2>Target Areas of Expertise</h2>
-            <ul>
+            <ul style="display: inline-block; text-align: left;">
                 <li><strong>Pediatrics:</strong> Specialized clinical litigation support.</li>
                 <li><strong>Outpatient Adult Care:</strong> Standards of practice review.</li>
                 <li><strong>Standard of Care Disputes:</strong> Objective, evidence-based analysis.</li>
