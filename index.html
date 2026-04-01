@@ -16,6 +16,7 @@
         
         .hero { display: flex; flex-direction: column; align-items: center; text-align: center; }
         .headshot { width: 200px; border-radius: 8px; margin-bottom: 20px; }
+        .tag-box { display: inline-block; border: 2px solid #D4AF37; padding: 5px 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; font-size: 0.8rem; }
         
         /* Unified Button Styles */
         .btn-group { display: flex; gap: 10px; margin-top: 20px; justify-content: center; flex-wrap: wrap; }
@@ -27,6 +28,7 @@
 
         @media (min-width: 768px) { 
             .hero { flex-direction: row; text-align: left; } 
+            .headshot-container { display: flex; flex-direction: column; align-items: center; }
             .btn-group { justify-content: flex-start; }
             .site-header { padding: 20px 5%; }
             .logo-img { height: 80px; }
@@ -50,9 +52,11 @@
     </header>
     <div class="container">
         <section class="white-section hero" style="text-align: left;">
-            <img src="Headshot.jpg" alt="Jessica Barr" class="headshot" style="margin: 0 auto 20px auto; display: block;">
+            <div class="headshot-container">
+                <img src="Headshot.jpg" alt="Jessica Barr" class="headshot" style="margin-bottom: 20px;">
+                <div class="tag-box">Experienced Expert Witness</div>
+            </div>
             <div style="flex: 1; margin-left: 20px;">
-                <div style="display: inline-block; border: 2px solid #D4AF37; padding: 5px 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; font-size: 0.8rem;">Experienced Expert Witness</div>
                 <h1>Precision-Based Nursing Expertise for Legal Professionals.</h1>
                 <h3>When nursing standards of care are scrutinized, clarity is the best evidence.</h3>
                 <p>Leveraging over 16 years of clinical excellence in pediatrics and adult outpatient care to provide authoritative record review, deposition support, and courtroom testimony.</p>
