@@ -12,7 +12,8 @@
         .nav-links { display: flex; gap: 10px; flex-wrap: wrap; }
         .nav-links a { text-decoration: none; color: #ffffff; font-size: 0.8em; font-weight: 700; white-space: nowrap; }
         .container { padding: 20px; max-width: 900px; margin: 0 auto; }
-        .white-section { background-color: #ffffff; padding: 30px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); text-align: center; }
+        .white-section { background-color: #ffffff; padding: 30px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        
         .hero { display: flex; flex-direction: column; align-items: center; text-align: center; }
         .headshot { width: 200px; border-radius: 8px; margin-bottom: 20px; }
         
@@ -20,18 +21,20 @@
         .btn-group { display: flex; gap: 10px; margin-top: 20px; justify-content: center; flex-wrap: wrap; }
         .btn { padding: 12px 24px; text-decoration: none; font-weight: 700; border: 2px solid #D4AF37; display: inline-block; border-radius: 4px; background: #D4AF37; color: #ffffff; transition: 0.3s; }
         
-        /* Responsive Courtroom Image */
-        .responsive-img { width: 100%; max-width: 500px; height: auto; border-radius: 8px; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto; }
-        
+        /* Litigation Section */
+        .litigation-section { display: flex; flex-direction: column; gap: 20px; align-items: center; }
+        .litigation-image { width: 100%; max-width: 300px; height: auto; border-radius: 8px; }
+
         @media (min-width: 768px) { 
             .hero { flex-direction: row; text-align: left; } 
-            .white-section { text-align: left; }
             .btn-group { justify-content: flex-start; }
             .site-header { padding: 20px 5%; }
             .logo-img { height: 80px; }
             .nav-links a { font-size: 0.95em; }
-            /* Center the image specifically for desktop containers if desired */
-            .responsive-img { margin-left: 0; }
+            
+            /* Litigation Section Desktop */
+            .litigation-section { flex-direction: row; text-align: left; align-items: flex-start; }
+            .litigation-image { flex: 0 0 300px; }
         }
     </style>
 </head>
@@ -65,11 +68,13 @@
             <p>As an <strong>Assistant Clinical Professor</strong>, I possess a unique ability to bridge the gap between clinical reality and legal understanding. I don’t just understand the standard of care; I teach it. This instructional background enables me to distill complex medical data into clear, compelling narratives that jurors and mediators can immediately grasp.</p>
         </section>
 
-        <section class="white-section">
-            <img src="court.png" alt="Expert Witness Services" class="responsive-img">
-            <h2>Authoritative Litigation Support</h2>
-            <p>From pediatrics to outpatient adult care, I translate complex medical data into clear, actionable testimony.</p>
-            <p><strong>Fee schedule available upon request to counsel.</strong></p>
+        <section class="white-section litigation-section">
+            <div style="flex: 1;">
+                <h2>Authoritative Litigation Support</h2>
+                <p>From pediatrics to outpatient adult care, I translate complex medical data into clear, actionable testimony.</p>
+                <p><strong>Fee schedule available upon request to counsel.</strong></p>
+            </div>
+            <img src="court.png" alt="Expert Witness Services" class="litigation-image">
         </section>
 
         <section class="white-section">
