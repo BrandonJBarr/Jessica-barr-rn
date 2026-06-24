@@ -29,17 +29,45 @@
             display: flex; 
             align-items: center; 
             justify-content: space-between; 
-            padding: 30px 8%; 
+            padding: 20px 8%; 
             background: var(--navy); 
             border-bottom: 1px solid rgba(197, 160, 89, 0.3);
         }
 
-        .logo-text { 
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-decoration: none;
+        }
+
+        .logo-img { 
+            height: 70px; 
+            width: auto; 
+        }
+
+        .logo-text-wrap {
+            display: flex;
+            flex-direction: column;
+            border-left: 1px solid rgba(255,255,255,0.2);
+            padding-left: 20px;
+        }
+
+        .brand-name {
             font-family: 'Playfair Display', serif;
+            color: var(--white);
+            font-size: 1.6rem;
+            line-height: 1;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-title {
             color: var(--gold);
-            font-size: 1.5rem;
-            letter-spacing: 1px;
+            font-size: 0.75rem;
             text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1.5px;
         }
 
         .nav-links { display: flex; gap: 30px; }
@@ -222,12 +250,21 @@
             .hero-content { padding: 40px; }
             h1 { font-size: 2.5rem; }
             .testimonials { grid-template-columns: 1fr; }
+            .header-brand { gap: 10px; }
+            .logo-text-wrap { padding-left: 10px; }
+            .brand-name { font-size: 1.2rem; }
         }
     </style>
 </head>
 <body>
     <header class="site-header">
-        <div class="logo-text">Jessica Barr</div>
+        <a href="index.html" class="header-brand">
+            <img src="logo_2026_monogram_only.png" alt="JB Monogram" class="logo-img">
+            <div class="logo-text-wrap">
+                <span class="brand-name">Jessica Barr</span>
+                <span class="brand-title">Nurse Expert Witness</span>
+            </div>
+        </a>
         <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>

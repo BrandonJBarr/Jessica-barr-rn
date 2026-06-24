@@ -3,26 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Jessica Barr, MSN, RN - Nurse Expert Witness</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Contact | Jessica Barr, MSN, RN | Nurse Expert Witness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #2c3e50; color: #333333; font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; }
-        .site-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 15px 5%; background: #2c3e50; border-bottom: 2px solid #D4AF37; gap: 15px; }
-        .logo-img { height: 50px; width: auto; }
-        .nav-links { display: flex; gap: 10px; }
-        .nav-links a { text-decoration: none; color: #ffffff; font-size: 0.85em; font-weight: 700; white-space: nowrap; }
-        .container { padding: 20px; max-width: 900px; margin: 0 auto; }
-        .white-section { background-color: #ffffff; padding: 30px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-        @media (min-width: 768px) { 
-            .site-header { padding: 20px 5%; }
-            .logo-img { height: 80px; }
-            .nav-links a { font-size: 0.95em; }
-        }
+        :root { --navy: #1a2a3a; --gold: #c5a059; --parchment: #fcfaf7; --text: #2d2d2d; --white: #ffffff; }
+        body { background-color: var(--navy); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+        .site-header { display: flex; align-items: center; justify-content: space-between; padding: 20px 8%; background: var(--navy); border-bottom: 1px solid rgba(197, 160, 89, 0.3); }
+        .header-brand { display: flex; align-items: center; gap: 20px; text-decoration: none; }
+        .logo-img { height: 70px; width: auto; }
+        .logo-text-wrap { display: flex; flex-direction: column; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 20px; }
+        .brand-name { font-family: 'Playfair Display', serif; color: var(--white); font-size: 1.6rem; line-height: 1; margin-bottom: 4px; letter-spacing: 0.5px; }
+        .brand-title { color: var(--gold); font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 1.5px; }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { text-decoration: none; color: rgba(255,255,255,0.8); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
+        .container { max-width: 700px; margin: 0 auto; padding: 60px 20px; }
+        .white-section { background-color: var(--white); padding: 50px; border-radius: 4px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        h1 { font-family: 'Playfair Display', serif; color: var(--navy); font-size: 3rem; margin-bottom: 20px; text-align: center; }
+        label { display: block; font-weight: 700; color: var(--navy); margin-bottom: 5px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+        input, textarea { width: 100%; padding: 12px; margin-bottom: 25px; border: 1px solid #ddd; border-radius: 2px; font-family: 'Inter', sans-serif; box-sizing: border-box; }
+        .btn { width: 100%; padding: 16px; background: var(--navy); color: var(--white); border: none; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: 0.3s; }
+        .btn:hover { background: var(--gold); }
+        .contact-info { text-align: center; margin-top: 40px; }
+        .contact-info p { margin: 10px 0; font-size: 1.1rem; color: var(--white); }
+        .contact-info strong { color: var(--gold); }
+        footer { text-align: center; padding: 60px; color: rgba(255,255,255,0.5); font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+        @media (max-width: 899px) { .header-brand { gap: 10px; } .logo-text-wrap { padding-left: 10px; } .brand-name { font-size: 1.2rem; } .white-section { padding: 30px; } }
     </style>
 </head>
 <body>
     <header class="site-header">
-        <img src="transparent_logo_1.png" alt="Logo" class="logo-img">
+        <a href="index.html" class="header-brand">
+            <img src="logo_2026_monogram_only.png" alt="JB Monogram" class="logo-img">
+            <div class="logo-text-wrap">
+                <span class="brand-name">Jessica Barr</span>
+                <span class="brand-title">Nurse Expert Witness</span>
+            </div>
+        </a>
         <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
@@ -32,22 +49,28 @@
     </header>
     <div class="container">
         <section class="white-section">
-            <h1>Contact Jessica Barr</h1>
-            <p>Schedule a consultation to discuss case viability.</p>
+            <h1>Contact & Retainer</h1>
+            <p style="text-align: center; color: #555; margin-bottom: 40px;">Request case availability, CV, and Fee Schedule.</p>
+            
             <form action="https://formspree.io/f/xgoplqwy" method="POST">
-                <label>Name:</label><br>
-                <input type="text" name="name" required style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
-                <label>Brief Description:</label><br>
-                <textarea name="message" rows="5" required style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea><br>
-                <button type="submit" style="padding: 10px 20px; background: #D4AF37; color: #fff; text-decoration: none; font-weight: 700; border-radius: 4px; border:none;">Submit Inquiry</button>
+                <label>Full Name / Law Firm</label>
+                <input type="text" name="name" required placeholder="Counsel or Firm Name">
+                
+                <label>Email Address</label>
+                <input type="email" name="_replyto" required placeholder="email@firm.com">
+
+                <label>Case Brief (Confidential)</label>
+                <textarea name="message" rows="5" required placeholder="Brief description of clinical issues or case specialty needed..."></textarea>
+                
+                <button type="submit" class="btn">Submit Inquiry</button>
             </form>
-            <br>
+        </section>
+
+        <div class="contact-info">
             <p><strong>Phone:</strong> (817) 975-1961</p>
             <p><strong>Email:</strong> JessicaBarr.RN@gmail.com</p>
-        </section>
+        </div>
     </div>
-    <footer style="text-align: center; color: white; padding: 20px;">
-        <p>&copy; 2026 Jessica Barr, MSN, RN</p>
-    </footer>
+    <footer>&copy; 2026 Jessica Barr, MSN, RN | Serving Attorneys Nationwide</footer>
 </body>
 </html>
