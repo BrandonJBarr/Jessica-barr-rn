@@ -8,7 +8,7 @@
     <style>
         :root { --navy: #1a2a3a; --gold: #c5a059; --parchment: #fcfaf7; --text: #2d2d2d; --white: #ffffff; }
         body { background-color: var(--navy); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-        .site-header { display: flex; align-items: center; justify-content: space-between; padding: 20px 8%; background: var(--navy); border-bottom: 1px solid rgba(197, 160, 89, 0.3); }
+        .site-header { display: flex; align-items: center; justify-content: space-between; padding: 20px 8%; background: var(--navy); border-bottom: 1px solid rgba(197, 160, 89, 0.3); flex-wrap: wrap; gap: 20px; }
         .header-brand { display: flex; align-items: center; gap: 20px; text-decoration: none; }
         .logo-img { height: 70px; width: auto; }
         .logo-text-wrap { display: flex; flex-direction: column; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 20px; }
@@ -28,7 +28,17 @@
         .contact-info p { margin: 10px 0; font-size: 1.1rem; color: var(--white); }
         .contact-info strong { color: var(--gold); }
         footer { text-align: center; padding: 60px; color: rgba(255,255,255,0.5); font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
-        @media (max-width: 899px) { .header-brand { gap: 10px; } .logo-text-wrap { padding-left: 10px; } .brand-name { font-size: 1.2rem; } .white-section { padding: 30px; } }
+        @media (min-width: 900px) { .site-header { flex-wrap: nowrap; } }
+        @media (max-width: 899px) { 
+            .site-header { justify-content: center; text-align: center; padding: 20px 5%; }
+            .header-brand { gap: 10px; width: 100%; justify-content: center; }
+            .logo-text-wrap { padding-left: 10px; text-align: left; }
+            .brand-name { font-size: 1.3rem; }
+            .nav-links { width: 100%; justify-content: center; gap: 15px; }
+            .nav-links a { font-size: 0.8rem; }
+            .white-section { padding: 30px; }
+            h1 { font-size: 2.2rem; }
+        }
     </style>
 </head>
 <body>
@@ -51,21 +61,13 @@
         <section class="white-section">
             <h1>Contact & Retainer</h1>
             <p style="text-align: center; color: #555; margin-bottom: 40px;">Request case availability, CV, and Fee Schedule.</p>
-            
             <form action="https://formspree.io/f/xgoplqwy" method="POST">
-                <label>Full Name / Law Firm</label>
-                <input type="text" name="name" required placeholder="Counsel or Firm Name">
-                
-                <label>Email Address</label>
-                <input type="email" name="_replyto" required placeholder="email@firm.com">
-
-                <label>Case Brief (Confidential)</label>
-                <textarea name="message" rows="5" required placeholder="Brief description of clinical issues or case specialty needed..."></textarea>
-                
+                <label>Full Name / Law Firm</label><input type="text" name="name" required placeholder="Counsel or Firm Name">
+                <label>Email Address</label><input type="email" name="_replyto" required placeholder="email@firm.com">
+                <label>Case Brief (Confidential)</label><textarea name="message" rows="5" required placeholder="Brief description of clinical issues or case specialty needed..."></textarea>
                 <button type="submit" class="btn">Submit Inquiry</button>
             </form>
         </section>
-
         <div class="contact-info">
             <p><strong>Phone:</strong> (817) 975-1961</p>
             <p><strong>Email:</strong> JessicaBarr.RN@gmail.com</p>

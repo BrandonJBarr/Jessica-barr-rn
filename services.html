@@ -8,16 +8,16 @@
     <style>
         :root { --navy: #1a2a3a; --gold: #c5a059; --parchment: #fcfaf7; --text: #2d2d2d; --white: #ffffff; }
         body { background-color: var(--navy); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-        .site-header { display: flex; align-items: center; justify-content: space-between; padding: 20px 8%; background: var(--navy); border-bottom: 1px solid rgba(197, 160, 89, 0.3); }
+        .site-header { display: flex; align-items: center; justify-content: space-between; padding: 20px 8%; background: var(--navy); border-bottom: 1px solid rgba(197, 160, 89, 0.3); flex-wrap: wrap; gap: 20px; }
         .header-brand { display: flex; align-items: center; gap: 20px; text-decoration: none; }
         .logo-img { height: 70px; width: auto; }
         .logo-text-wrap { display: flex; flex-direction: column; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 20px; }
         .brand-name { font-family: 'Playfair Display', serif; color: var(--white); font-size: 1.6rem; line-height: 1; margin-bottom: 4px; letter-spacing: 0.5px; }
         .brand-title { color: var(--gold); font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 1.5px; }
         .nav-links { display: flex; gap: 30px; }
-        .nav-links a { text-decoration: none; color: rgba(255,255,255,0.8); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s; }
+        .nav-links a { text-decoration: none; color: rgba(255,255,255,0.8); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
         .nav-links a:hover { color: var(--gold); }
-        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
         .white-section { background-color: var(--white); padding: 50px; border-radius: 4px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
         h1, h2 { font-family: 'Playfair Display', serif; color: var(--navy); }
         h1 { font-size: 3rem; margin-bottom: 20px; }
@@ -27,7 +27,17 @@
         .service-item p { margin: 0; color: #555; font-size: 1.05rem; }
         .highlight-box { background: var(--parchment); padding: 40px; border-left: 4px solid var(--gold); margin-bottom: 40px; }
         footer { text-align: center; padding: 60px; color: rgba(255,255,255,0.5); font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
-        @media (max-width: 899px) { .header-brand { gap: 10px; } .logo-text-wrap { padding-left: 10px; } .brand-name { font-size: 1.2rem; } .white-section { padding: 30px; } }
+        @media (min-width: 900px) { .site-header { flex-wrap: nowrap; } }
+        @media (max-width: 899px) { 
+            .site-header { justify-content: center; text-align: center; padding: 20px 5%; }
+            .header-brand { gap: 10px; width: 100%; justify-content: center; }
+            .logo-text-wrap { padding-left: 10px; text-align: left; }
+            .brand-name { font-size: 1.3rem; }
+            .nav-links { width: 100%; justify-content: center; gap: 15px; }
+            .nav-links a { font-size: 0.8rem; }
+            .white-section { padding: 30px; }
+            h1 { font-size: 2.2rem; }
+        }
     </style>
 </head>
 <body>
@@ -51,34 +61,12 @@
             <h1>Specialized Expert Services</h1>
             <p style="font-size: 1.2rem; color: #555;">When the standard of nursing care is scrutinized, the difference between a successful case and a failed one often comes down to clinical clarity. I provide high-authority record review and testimony grounded in both active clinical education and over 16 years of pediatric excellence.</p>
         </section>
-
         <section class="white-section">
-            <div class="service-item">
-                <div>
-                    <h3>Merit Screening & Case Assessment</h3>
-                    <p>Rapid, high-level clinical assessment to determine if a case meets the threshold for nursing standard of care violations. I help counsel decide early whether to commit resources to complex litigation.</p>
-                </div>
-            </div>
-            <div class="service-item">
-                <div>
-                    <h3>Clinical Chronologies & Fact-Finding</h3>
-                    <p>Transforming thousands of pages of medical records into clear, logical, and evidence-based timelines. I identify the "invisible" breaches in care that are often buried in dense nursing notes and flowsheets.</p>
-                </div>
-            </div>
-            <div class="service-item">
-                <div>
-                    <h3>Standard of Care Analysis</h3>
-                    <p>Authoritative analysis of nursing protocols, hospital policies, and administrative standards. As a Clinical Professor, I am uniquely positioned to evaluate whether a nurse's actions aligned with the required educational and professional benchmarks.</p>
-                </div>
-            </div>
-            <div class="service-item">
-                <div>
-                    <h3>Deposition & Trial Testimony</h3>
-                    <p>A teacher’s voice in the courtroom. I provide objective, well-prepared, and highly credible testimony that distills complex medical concepts into simple, understandable truths for juries and mediators.</p>
-                </div>
-            </div>
+            <div class="service-item"><div><h3>Merit Screening & Case Assessment</h3><p>Rapid, high-level clinical assessment to determine if a case meets the threshold for nursing standard of care violations. I help counsel decide early whether to commit resources to complex litigation.</p></div></div>
+            <div class="service-item"><div><h3>Clinical Chronologies & Fact-Finding</h3><p>Transforming thousands of pages of medical records into clear, logical, and evidence-based timelines. I identify the "invisible" breaches in care that are often buried in dense nursing notes and flowsheets.</p></div></div>
+            <div class="service-item"><div><h3>Standard of Care Analysis</h3><p>Authoritative analysis of nursing protocols, hospital policies, and administrative standards. As a Clinical Professor, I am uniquely positioned to evaluate whether a nurse's actions aligned with the required educational and professional benchmarks.</p></div></div>
+            <div class="service-item"><div><h3>Deposition & Trial Testimony</h3><p>A teacher’s voice in the courtroom. I provide objective, well-prepared, and highly credible testimony that distills complex medical concepts into simple, understandable truths for juries and mediators.</p></div></div>
         </section>
-
         <div class="highlight-box">
             <h3 style="font-family: 'Playfair Display', serif; margin-top: 0;">Specialized in Pediatrics</h3>
             <p>From Neonatal Intensive Care (NICU) to Acute Cardiac disorders and Pediatric Home Health, I provide expert insight across the entire spectrum of pediatric nursing.</p>
