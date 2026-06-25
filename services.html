@@ -3,94 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Jessica Barr, MSN, RN | Nurse Expert Witness</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <title>Expert Services | Jessica Barr, MSN, RN</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        :root { --navy: #1a2a3a; --gold: #c5a059; --parchment: #fcfaf7; --text: #2d2d2d; --white: #ffffff; }
-        body { background-color: var(--navy); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+        :root {
+            --navy: #1A2B3C;
+            --gold: #C5A059;
+            --white: #FFFFFF;
+            --slate: #4A5568;
+        }
         
-        .site-header { 
-            display: flex; 
-            align-items: center; 
-            justify-content: space-between; 
-            padding: 15px 8%; 
-            background: var(--navy); 
-            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
-            flex-wrap: wrap;
-            gap: 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
 
-        .header-brand { display: flex; align-items: center; gap: 20px; text-decoration: none; }
-        .logo-img { height: 60px; width: auto; }
-        .logo-text-wrap { display: flex; flex-direction: column; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 20px; }
-        .brand-name { font-family: 'Playfair Display', serif; color: var(--white); font-size: 1.6rem; line-height: 1; margin-bottom: 4px; letter-spacing: 0.5px; }
-        .brand-title { color: var(--gold); font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 1.5px; }
-        .nav-links { display: flex; gap: 30px; }
-        .nav-links a { text-decoration: none; color: rgba(255,255,255,0.8); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--gold); }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        .white-section { background-color: var(--white); padding: 50px; border-radius: 4px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-        h1, h2 { font-family: 'Playfair Display', serif; color: var(--navy); }
-        h1 { font-size: 3rem; margin-bottom: 20px; }
-        
-        .service-item { display: flex; align-items: flex-start; gap: 25px; margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 30px; }
-        .service-item:last-child { border-bottom: none; }
-        .service-item h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin: 0 0 10px 0; color: var(--navy); }
-        .service-item p { margin: 0; color: #555; font-size: 1.05rem; }
-        
-        .highlight-box { background: var(--parchment); padding: 40px; border-left: 4px solid var(--gold); margin-bottom: 40px; }
-        footer { text-align: center; padding: 60px; color: rgba(255,255,255,0.5); font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+        /* Hero Section */
+        .services-hero {
+            background-color: var(--navy);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
 
-        @media (min-width: 900px) { .site-header { flex-wrap: nowrap; } }
-        @media (max-width: 899px) { 
-            .site-header { justify-content: center; text-align: center; padding: 15px 5%; }
-            .header-brand { gap: 10px; width: 100%; justify-content: center; }
-            .logo-img { height: 50px; }
-            .logo-text-wrap { padding-left: 10px; text-align: left; }
-            .brand-name { font-size: 1.3rem; }
-            .nav-links { width: 100%; justify-content: center; gap: 15px; }
-            .nav-links a { font-size: 0.8rem; }
-            .white-section { padding: 30px; }
-            h1 { font-size: 2.2rem; }
+        .services-hero h1 {
+            font-family: serif;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .services-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            padding: 80px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--gold);
+        }
+
+        .service-card h3 {
+            color: var(--navy);
+            margin-top: 0;
+        }
+
+        /* Methodology Section */
+        .methodology-section {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .methodology-container {
+            margin-top: 40px;
+            background-color: var(--navy);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .methodology-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* CTA */
+        .cta-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--gold);
+            color: var(--white);
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
-    <header class="site-header">
-        <a href="index.html" class="header-brand">
-            <img src="logo_2026_monogram_only.png" alt="JB Monogram" class="logo-img">
-            <div class="logo-text-wrap">
-                <span class="brand-name">Jessica Barr</span>
-                <span class="brand-title">Nurse Expert Witness</span>
-            </div>
-        </a>
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="credentials.html">Credentials</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <div class="container">
-        <section class="white-section">
-            <h1>Specialized Expert Services</h1>
-            <p style="font-size: 1.2rem; color: #555;">When the standard of nursing care is scrutinized, the difference between a successful case and a failed one often comes down to clinical clarity. I provide high-authority record review and testimony grounded in both active clinical education and over 16 years of pediatric excellence.</p>
-        </section>
-        <section class="white-section">
-            <div class="service-item"><div><h3>Merit Screening & Case Assessment</h3><p>Rapid, high-level clinical assessment to determine if a case meets the threshold for nursing standard of care violations. I help counsel decide early whether to commit resources to complex litigation.</p></div></div>
-            <div class="service-item"><div><h3>Clinical Chronologies & Fact-Finding</h3><p>Transforming thousands of pages of medical records into clear, logical, and evidence-based timelines. I identify the "invisible" breaches in care that are often buried in dense nursing notes and flowsheets.</p></div></div>
-            <div class="service-item"><div><h3>Standard of Care Analysis</h3><p>Authoritative analysis of nursing protocols, hospital policies, and administrative standards. As a Clinical Professor, I am uniquely positioned to evaluate whether a nurse's actions aligned with the required educational and professional benchmarks.</p></div></div>
-            <div class="service-item"><div><h3>Deposition & Trial Testimony</h3><p>A teacher’s voice in the courtroom. I provide objective, well-prepared, and highly credible testimony that distills complex medical concepts into simple, understandable truths for juries and mediators.</p></div></div>
-        </section>
-        <div class="highlight-box">
-            <h3 style="font-family: 'Playfair Display', serif; margin-top: 0;">Specialized in Pediatrics</h3>
-            <p>From Neonatal Intensive Care (NICU) to Acute Cardiac disorders and Pediatric Home Health, I provide expert insight across the entire spectrum of pediatric nursing.</p>
+
+    <header class="services-hero">
+        <div class="container">
+            <h1>Clinical Reality, Legal Clarity.</h1>
+            <p>Bridging the gap between bedside nursing standards and the courtroom with academic rigor and clinical excellence.</p>
         </div>
-    </div>
-    <footer>&copy; 2026 Jessica Barr, MSN, RN | DFW / Southlake, TX</footer>
+    </header>
+
+    <section class="services-grid container">
+        <div class="service-card">
+            <h3>Standard-of-Care Analysis</h3>
+            <p>I map medical records against established pediatric and neonatal clinical guidelines to identify specific deviations from the standard of care.</p>
+        </div>
+        <div class="service-card">
+            <h3>Jury-Ready Chronologies</h3>
+            <p>Transforming voluminous charts into clean, chronological timelines that highlight critical clinical events and missed observations.</p>
+        </div>
+        <div class="service-card">
+            <h3>Research & Literature Support</h3>
+            <p>Synthesizing current clinical research and hospital policy to anchor your legal theory in rigorous evidence.</p>
+        </div>
+        <div class="service-card">
+            <h3>Deposition & Trial Testimony</h3>
+            <p>Objective, calm, and authoritative testimony delivered with the clarity of a clinical professor.</p>
+        </div>
+    </section>
+
+    <section class="methodology-section">
+        <div class="container">
+            <h2>The Barr Clinical Review Process</h2>
+            <div class="methodology-container">
+                <img src="assets/methodology.png" alt="Clinical Review Process Roadmap" class="methodology-image">
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section container">
+        <h2>Ready to discuss your case?</h2>
+        <p>Request a CV and fee schedule for pediatric or neonatal expert consultation.</p>
+        <a href="contact.html" class="btn-primary">REQUEST CV & FEE SCHEDULE</a>
+    </section>
+
 </body>
 </html>
