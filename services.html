@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <style>
         :root {
-            --navy: #1A2B3C;
-            --gold: #C5A059;
+            --navy: #1a2a3a;
+            --gold: #c5a059;
             --white: #FFFFFF;
-            --slate: #4A5568;
         }
         
         body {
@@ -19,8 +18,10 @@
             color: #333;
             margin: 0;
             padding: 0;
+            background-color: #f8f9fa;
         }
 
+        /* Site Header */
         .site-header { 
             display: flex; 
             align-items: center; 
@@ -28,8 +29,6 @@
             padding: 15px 8%; 
             background: var(--navy); 
             border-bottom: 1px solid rgba(197, 160, 89, 0.3);
-            flex-wrap: wrap;
-            gap: 20px;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -95,7 +94,7 @@
         }
 
         .services-hero h1 {
-            font-family: serif;
+            font-family: 'Playfair Display', serif;
             font-size: 3rem;
             margin-bottom: 20px;
         }
@@ -130,7 +129,6 @@
 
         /* Methodology Section */
         .methodology-section {
-            background-color: #f8f9fa;
             padding: 80px 0;
             text-align: center;
         }
@@ -150,7 +148,6 @@
             margin: 0 auto;
         }
 
-        /* CTA */
         .cta-section {
             padding: 80px 0;
             text-align: center;
@@ -166,30 +163,10 @@
             display: inline-block;
             transition: transform 0.2s;
         }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-        }
     </style>
 </head>
 <body>
-
     <header class="site-header">
-        <a href="index.html" class="header-brand">
-            <img src="logo_2026_monogram_only.png" alt="JB Monogram" class="logo-img">
-            <div class="logo-text-wrap">
-                <span class="brand-name">Jessica Barr</span>
-                <span class="brand-title">Nurse Expert Witness</span>
-            </div>
-        </a>
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="credentials.html">Credentials</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-
         <a href="index.html" class="header-brand">
             <img src="logo_2026_monogram_only.png" alt="JB Monogram" class="logo-img">
             <div class="logo-text-wrap">
@@ -245,6 +222,5 @@
         <p>Request a CV and fee schedule for pediatric or neonatal expert consultation.</p>
         <a href="contact.html" class="btn-primary">REQUEST CV & FEE SCHEDULE</a>
     </section>
-
 </body>
 </html>
