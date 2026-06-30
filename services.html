@@ -17,74 +17,25 @@
             --white-fade: rgba(255, 255, 255, 0.7);
         }
 
-        body { 
-            background-color: var(--navy); 
-            color: var(--white); 
-            font-family: 'Inter', sans-serif; 
-            margin: 0; 
-            padding: 0; 
+        body {
+            background-color: var(--navy);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* STICKY HEADER (Synced with index.html) */
-        .site-header { 
-            display: flex; 
-            align-items: center; 
-            justify-content: space-between; 
-            padding: 15px 8%; 
-            background: var(--navy); 
-            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
-            flex-wrap: wrap;
-            gap: 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-brand {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            text-decoration: none;
-        }
-
+        /* SITE-WIDE SHARED HEADER */
+        .site-header { display: flex; align-items: center; justify-content: space-between; padding: 15px 8%; background: var(--navy); border-bottom: 1px solid rgba(197, 160, 89, 0.3); position: sticky; top: 0; z-index: 1000; box-sizing: border-box; width: 100%; }
+        .header-brand { display: flex; align-items: center; gap: 20px; text-decoration: none; }
         .logo-img { height: 60px; width: auto; }
-
-        .logo-text-wrap {
-            display: flex;
-            flex-direction: column;
-            border-left: 1px solid rgba(255,255,255,0.2);
-            padding-left: 20px;
-        }
-
-        .brand-name {
-            font-family: 'Playfair Display', serif;
-            color: var(--white);
-            font-size: 1.6rem;
-            line-height: 1;
-            margin-bottom: 4px;
-            letter-spacing: 0.5px;
-        }
-
-        .brand-title {
-            color: var(--gold);
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-        }
-
+        .logo-text-wrap { display: flex; flex-direction: column; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 20px; }
+        .brand-name { font-family: 'Playfair Display', serif; color: var(--white); font-size: 1.6rem; line-height: 1; margin-bottom: 4px; letter-spacing: 0.5px; }
+        .brand-title { color: var(--gold); font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 1.5px; }
         .nav-links { display: flex; gap: 30px; }
-        .nav-links a { 
-            text-decoration: none; 
-            color: rgba(255,255,255,0.8); 
-            font-size: 0.9rem; 
-            font-weight: 700; 
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s;
-        }
+        .nav-links a { text-decoration: none; color: rgba(255,255,255,0.8); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s; }
         .nav-links a:hover { color: var(--gold); }
 
         /* HERO SECTION */
@@ -175,9 +126,9 @@
             aspect-ratio: 4 / 3;
         }
 
-        .visual-frame img { 
-            width: 100%; 
-            height: 100%; 
+        .visual-frame img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             transition: transform 0.8s ease;
         }
@@ -248,19 +199,18 @@
             text-transform: uppercase;
         }
 
-        /* RESPONSIVENESS */
-        @media (max-width: 1024px) {
+        /* SHARED MOBILE HEADER */
+        @media (max-width: 900px) {
+            .site-header { padding: 15px 5%; flex-direction: column; gap: 15px; text-align: center; }
+            .header-brand { justify-content: center; width: 100%; gap: 15px; }
+            .logo-img { height: 50px; }
+            .logo-text-wrap { padding-left: 15px; text-align: left; }
+            .brand-name { font-size: 1.3rem; }
+            .nav-links { width: 100%; justify-content: center; gap: 15px; }
+            .nav-links a { font-size: 0.8rem; }
             .service-block { grid-template-columns: 1fr; gap: 50px; padding: 80px 8%; }
-            .services-hero h1 { font-size: 3rem; }
-            .service-info h2 { font-size: 2.2rem; }
-            .site-header { padding: 15px 5%; }
-        }
-
-        @media (max-width: 600px) {
-            .nav-links { gap: 15px; }
-            .nav-links a { font-size: 0.75rem; }
-            .services-hero { padding-top: 60px; }
             .services-hero h1 { font-size: 2.5rem; }
+            .service-info h2 { font-size: 2.2rem; }
         }
     </style>
 </head>
