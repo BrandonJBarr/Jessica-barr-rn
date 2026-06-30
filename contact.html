@@ -4,11 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Jessica Barr, MSN, RN | Nurse Expert Witness</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <!-- 2026 Editorial Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
     <style>
-        :root { --navy: #1a2a3a; --gold: #c5a059; --parchment: #fcfaf7; --text: #2d2d2d; --white: #ffffff; }
-        body { background-color: var(--navy); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-        
+        :root {
+            --navy: #1a2a3a;
+            --navy-dark: #121d28;
+            --gold: #c5a059;
+            --parchment: #fcfaf7;
+            --text: #2d2d2d;
+            --white: #ffffff;
+            --gray-border: #e1e4e8;
+        }
+
+        body { 
+            background-color: var(--navy); 
+            color: var(--white); 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* STICKY HEADER (Synced with index.html) */
         .site-header { 
             display: flex; 
             align-items: center; 
@@ -23,41 +42,199 @@
             z-index: 1000;
         }
 
-        .header-brand { display: flex; align-items: center; gap: 20px; text-decoration: none; }
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-decoration: none;
+        }
+
         .logo-img { height: 60px; width: auto; }
-        .logo-text-wrap { display: flex; flex-direction: column; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 20px; }
-        .brand-name { font-family: 'Playfair Display', serif; color: var(--white); font-size: 1.6rem; line-height: 1; margin-bottom: 4px; letter-spacing: 0.5px; }
-        .brand-title { color: var(--gold); font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 1.5px; }
+
+        .logo-text-wrap {
+            display: flex;
+            flex-direction: column;
+            border-left: 1px solid rgba(255,255,255,0.2);
+            padding-left: 20px;
+        }
+
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            color: var(--white);
+            font-size: 1.6rem;
+            line-height: 1;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-title {
+            color: var(--gold);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+
         .nav-links { display: flex; gap: 30px; }
-        .nav-links a { text-decoration: none; color: rgba(255,255,255,0.8); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s; }
+        .nav-links a { 
+            text-decoration: none; 
+            color: rgba(255,255,255,0.8); 
+            font-size: 0.9rem; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
         .nav-links a:hover { color: var(--gold); }
 
-        .container { max-width: 700px; margin: 0 auto; padding: 60px 20px; }
-        .white-section { background-color: var(--white); padding: 50px; border-radius: 4px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-        h1 { font-family: 'Playfair Display', serif; color: var(--navy); font-size: 3rem; margin-bottom: 20px; text-align: center; }
-        label { display: block; font-weight: 700; color: var(--navy); margin-bottom: 5px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
-        input, textarea { width: 100%; padding: 12px; margin-bottom: 25px; border: 1px solid #ddd; border-radius: 2px; font-family: 'Inter', sans-serif; box-sizing: border-box; }
-        .btn { width: 100%; padding: 16px; background: var(--navy); color: var(--white); border: none; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: 0.3s; }
-        .btn:hover { background: var(--gold); }
-        .contact-info { text-align: center; margin-top: 40px; }
-        .contact-info p { margin: 10px 0; font-size: 1.1rem; color: var(--white); }
-        .contact-info strong { color: var(--gold); }
-        footer { text-align: center; padding: 60px; color: rgba(255,255,255,0.5); font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
-        @media (min-width: 900px) { .site-header { flex-wrap: nowrap; } }
-        @media (max-width: 899px) { 
-            .site-header { justify-content: center; text-align: center; padding: 15px 5%; }
-            .header-brand { gap: 10px; width: 100%; justify-content: center; }
-            .logo-img { height: 50px; }
-            .logo-text-wrap { padding-left: 10px; text-align: left; }
-            .brand-name { font-size: 1.3rem; }
+        /* CONTENT CONTAINER */
+        .container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 80px 20px; 
+        }
+
+        .contact-card {
+            background-color: var(--white);
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+            display: grid;
+            grid-template-columns: 1fr;
+            color: var(--text);
+        }
+
+        .contact-header {
+            padding: 60px 80px 40px;
+            text-align: center;
+            border-bottom: 1px solid var(--gray-border);
+            background: var(--parchment);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--navy);
+            margin: 0 0 10px 0;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+        }
+
+        .form-section {
+            padding: 60px 80px;
+        }
+
+        form {
+            display: grid;
+            gap: 25px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-weight: 700;
+            color: var(--navy);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--gray-border);
+            border-radius: 2px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            background: var(--gray-light);
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: var(--white);
+        }
+
+        .btn-submit {
+            background: var(--navy);
+            color: var(--white);
+            padding: 20px;
+            border: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 2px;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            background: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        /* QUICK CONTACT INFO */
+        .quick-contact {
+            background: var(--navy-dark);
+            color: var(--white);
+            padding: 40px 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            text-align: center;
+        }
+
+        .info-item h4 {
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            margin: 0 0 10px 0;
+        }
+
+        .info-item p {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 8%;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* RESPONSIVENESS */
+        @media (max-width: 900px) {
+            .site-header { padding: 15px 5%; justify-content: center; }
+            .header-brand { width: 100%; justify-content: center; margin-bottom: 10px; }
             .nav-links { width: 100%; justify-content: center; gap: 15px; }
-            .nav-links a { font-size: 0.8rem; }
-            .white-section { padding: 30px; }
+            .contact-header { padding: 40px 20px; }
+            .form-section { padding: 40px 20px; }
             h1 { font-size: 2.2rem; }
+            .quick-contact { grid-template-columns: 1fr; padding: 40px 20px; }
         }
     </style>
 </head>
 <body>
+
     <header class="site-header">
         <a href="index.html" class="header-brand">
             <img src="logo_2026_monogram_only.png" alt="JB Monogram" class="logo-img">
@@ -70,25 +247,57 @@
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="credentials.html">Credentials</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html" style="color: var(--gold);">Contact</a>
         </nav>
     </header>
+
     <div class="container">
-        <section class="white-section">
-            <h1>Contact & Retainer</h1>
-            <p style="text-align: center; color: #555; margin-bottom: 40px;">Request case availability, CV, and Fee Schedule.</p>
-            <form action="https://formspree.io/f/xgoplqwy" method="POST">
-                <label>Full Name / Law Firm</label><input type="text" name="name" required placeholder="Counsel or Firm Name">
-                <label>Email Address</label><input type="email" name="_replyto" required placeholder="email@firm.com">
-                <label>Case Brief (Confidential)</label><textarea name="message" rows="5" required placeholder="Brief description of clinical issues or case specialty needed..."></textarea>
-                <button type="submit" class="btn">Submit Inquiry</button>
-            </form>
-        </section>
-        <div class="contact-info">
-            <p><strong>Phone:</strong> (817) 975-1961</p>
-            <p><strong>Email:</strong> JessicaBarr.RN@gmail.com</p>
-        </div>
+        <main class="contact-card">
+            
+            <div class="contact-header">
+                <span class="subtitle">Availability & Retainer</span>
+                <h1>Case Consultation</h1>
+                <p>Request case review availability, full CV, and current Fee Schedule.</p>
+            </div>
+
+            <div class="form-section">
+                <form action="https://formspree.io/f/xgoplqwy" method="POST">
+                    <div class="form-group">
+                        <label>Counsel / Law Firm</label>
+                        <input type="text" name="name" required placeholder="Enter firm or lead counsel name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Direct Email Address</label>
+                        <input type="email" name="_replyto" required placeholder="email@firm.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Case Specialty / Brief (Confidential)</label>
+                        <textarea name="message" rows="5" required placeholder="Briefly describe the clinical area of focus or specialty needed..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Submit Inquiry</button>
+                </form>
+            </div>
+
+            <div class="quick-contact">
+                <div class="info-item">
+                    <h4>Direct Phone</h4>
+                    <p>(817) 975-1961</p>
+                </div>
+                <div class="info-item">
+                    <h4>Direct Email</h4>
+                    <p>JessicaBarr.RN@gmail.com</p>
+                </div>
+            </div>
+
+        </main>
     </div>
-    <footer>&copy; 2026 Jessica Barr, MSN, RN | Serving Attorneys Nationwide</footer>
+
+    <footer>
+        &copy; 2026 Jessica Barr, MSN, RN | DFW / Southlake, TX | Serving Attorneys Nationwide
+    </footer>
+
 </body>
 </html>
