@@ -259,5 +259,17 @@
         &copy; 2026 Jessica Barr, MSN, RN | DFW / Southlake, TX | Serving Attorneys Nationwide
     </footer>
 
+    <script>
+        // Pre-fill the message field from URL parameters
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const subject = urlParams.get('subject');
+            const messageField = document.querySelector('textarea[name="message"]');
+            
+            if (subject && messageField) {
+                messageField.value = "I am interested in the " + subject + ". \n\n" + messageField.value;
+            }
+        });
+    </script>
 </body>
 </html>
