@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attorney Resources | Jessica Barr, MSN, RN</title>
+    <!-- 2026 Editorial Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1a2a3a;
+            --navy-dark: #121d28;
+            --gold: #c5a059;
+            --parchment: #fcfaf7;
+            --text: #2d2d2d;
+            --white: #ffffff;
+            --white-fade: rgba(255, 255, 255, 0.7);
+        }
+
+        body { background-color: var(--navy); color: var(--white); font-family: 'Inter', sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+
+        /* SITE-WIDE SHARED HEADER */
+        .site-header { display: flex; align-items: center; justify-content: space-between; padding: 15px 8%; background: var(--navy); border-bottom: 1px solid rgba(197, 160, 89, 0.3); position: sticky; top: 0; z-index: 1000; box-sizing: border-box; width: 100%; }
+        .header-brand { display: flex; align-items: center; gap: 20px; text-decoration: none; }
+        .logo-img { height: 60px; width: auto; }
+        .logo-text-wrap { display: flex; flex-direction: column; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 20px; }
+        .brand-name { font-family: 'Playfair Display', serif; color: var(--white); font-size: 1.6rem; line-height: 1; margin-bottom: 4px; letter-spacing: 0.5px; }
+        .brand-title { color: var(--gold); font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 1.5px; }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { text-decoration: none; color: rgba(255,255,255,0.8); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 80px 20px; }
+
+        .page-header { text-align: center; margin-bottom: 80px; }
+        .page-header h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 20px; }
+        .page-header p { font-size: 1.2rem; color: var(--white-fade); max-width: 700px; margin: 0 auto; }
+
+        .resource-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        
+        .resource-card {
+            background: var(--navy-dark);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            padding: 40px;
+            border-radius: 4px;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .resource-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .resource-card h2 { font-family: 'Playfair Display', serif; color: var(--gold); margin-top: 0; }
+        .resource-card p { color: var(--white-fade); flex-grow: 1; }
+        .resource-card .btn-small {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        footer { text-align: center; padding: 60px; color: rgba(255,255,255,0.3); font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+
+        @media (max-width: 768px) {
+            .resource-grid { grid-template-columns: 1fr; }
+            .page-header h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="header-brand">
+            <img src="logo_2026_monogram_only.png" alt="JB Monogram" class="logo-img">
+            <div class="logo-text-wrap">
+                <span class="brand-name">Jessica Barr</span>
+                <span class="brand-title">Nurse Expert Witness</span>
+            </div>
+        </a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="credentials.html">Credentials</a>
+            <a href="resources.html" style="color: var(--gold);">Resources</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Attorney Resources</h1>
+            <p>Clinical insights and checklists designed to help legal teams navigate complex pediatric and neonatal litigation.</p>
+        </div>
+
+        <div class="resource-grid">
+            <div class="resource-card">
+                <h2>Pediatric Nursing "Red Flags" Guide</h2>
+                <p>A high-level checklist for attorneys identifying common deviations in pediatric acute care, from documentation errors to escalation failures.</p>
+                <a href="#" class="btn-small">Request Access →</a>
+            </div>
+
+            <div class="resource-card">
+                <h2>The Standard of Care: A Teaching Perspective</h2>
+                <p>Understanding how nursing standards are taught and evaluated in modern clinical simulation settings.</p>
+                <a href="#" class="btn-small">Read Article →</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Jessica Barr, MSN, RN | Serving Attorneys Nationwide
+    </footer>
+</body>
+</html>
