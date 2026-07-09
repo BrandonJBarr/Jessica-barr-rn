@@ -233,6 +233,11 @@
                     </div>
 
                     <div class="form-group">
+                        <label>Opposing Counsel / Parties (For Conflict Check)</label>
+                        <input type="text" name="opposing_party" placeholder="Enter opposing parties to expedite conflict check">
+                    </div>
+
+                    <div class="form-group">
                         <label>Case Specialty / Brief (Confidential)</label>
                         <textarea name="message" rows="5" required placeholder="Briefly describe the clinical area of focus or specialty needed..."></textarea>
                     </div>
@@ -267,7 +272,11 @@
             const messageField = document.querySelector('textarea[name="message"]');
             
             if (subject && messageField) {
-                messageField.value = "I am interested in the " + subject + ". \n\n" + messageField.value;
+                if (subject === 'Conflict Check') {
+                    messageField.value = "I would like to request an initial conflict check and consultation for a new matter. \n\n" + messageField.value;
+                } else {
+                    messageField.value = "I am interested in the " + subject + ". \n\n" + messageField.value;
+                }
             }
         });
     </script>
