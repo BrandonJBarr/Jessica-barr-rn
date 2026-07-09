@@ -71,16 +71,15 @@
         }
 
         .hero-image-wrap { 
-            background: #1a2a3a; 
+            background: var(--navy); 
             border-radius: 0px; 
-            min-height: 100%; 
+            height: 100%; 
             position: relative; 
             overflow: hidden; 
-            transform: translateZ(0); 
             display: flex;
         }
 
-        .hero-image-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; background: #1a2a3a; border: 2px solid #1a2a3a; box-sizing: border-box; }
+        .hero-image-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
         .hero-content {
             padding: 40px;
@@ -189,11 +188,13 @@
         .specialty-card h3 {
             color: var(--gold);
             font-family: 'Playfair Display', serif;
-            margin-top: 0;
-            min-height: 2.5em; /* Ensures 1 and 2 line titles align */
+            margin: 0 0 15px 0;
+            min-height: 4.5rem; /* Increased for better 1-2 line alignment across devices */
             display: flex;
             align-items: center;
             justify-content: center;
+            line-height: 1.1;
+            font-size: 1.8rem;
         }
 
         /* Testimonials */
@@ -238,7 +239,13 @@
             .site-header { padding: 15px 8%; flex-wrap: nowrap; }
             .hero-card { grid-template-columns: 40% 60%; }
             h1 { font-size: 4.2rem; }
-            .hero-image-wrap { background: #1a2a3a !important; background-size: cover; background-position: center; border-radius: 0px; min-height: 300px; max-height: 500px; position: relative; overflow: hidden; transform: translateZ(0); }
+            .hero-image-wrap { 
+                background: var(--navy) !important; 
+                height: 100%; 
+                position: relative; 
+                overflow: hidden; 
+                display: flex;
+            }
             .hero-content { padding: 60px; }
             .testimonials { grid-template-columns: 1fr 1fr; gap: 60px; }
             .editorial-section { padding: 40px 10% 60px 10%; }
