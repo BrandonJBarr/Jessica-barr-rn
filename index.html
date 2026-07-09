@@ -73,8 +73,7 @@
         .hero-image-wrap { 
             background: #1a2a3a; 
             border-radius: 0px; 
-            min-height: 300px; 
-            max-height: 500px; 
+            min-height: 100%; 
             position: relative; 
             overflow: hidden; 
             transform: translateZ(0); 
@@ -191,6 +190,10 @@
             color: var(--gold);
             font-family: 'Playfair Display', serif;
             margin-top: 0;
+            min-height: 2.5em; /* Ensures 1 and 2 line titles align */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         /* Testimonials */
